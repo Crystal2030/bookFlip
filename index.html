@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>book</title>
+    <style>
+        body{
+            background:#7c6571;
+            margin: 0;
+            padding: 0;
+        }
+        #magazine{
+            position: relative;
+            width: 980px;
+            height: 1750px;
+            overflow: hidden;
+        }
+        #magazine .turn-page{
+            background-color: #7c6571;
+            background-size:100% 100%;
+        }
+        #magazine > div{
+            position: absolute;
+            overflow: hidden;
+            width: 964px;
+            height: 1750px;
+            top: 0px;
+            left: 0px;
+            right: auto;
+            bottom: auto;
+            z-index: 6;
+        }
+        #magazine > div:last-child:hover{
+            -webkit-transform-origin: 325px 500px;
+            -webkit-transform: translate(-40px, -500px) rotate(0deg) translate(40px, 0);
+
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="magazine">
+    <div style="background-image:url(images/1.jpg);"></div>
+    <div style="background-image:url(images/2.jpg);"></div>
+    <div style="background-image:url(images/3.jpg);"></div>
+    <div style="background-image:url(images/4.jpg);"></div>
+    <div style="background-image:url(images/5.jpeg);"></div>
+    <div style="background-image:url(images/6.jpg);"></div>
+</div>
+</body>
+</html>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="js/jquery.flip.js"></script>
+<!--<script src="js/turn.js"></script>-->
+
+<script type="text/javascript" language="javascript">
+    /*$(window).ready(function() {
+        $('#magazine').turn({
+            display: 'single',
+            acceleration: true,
+            gradients: !$.isTouch,
+            elevation:50,
+            when: {
+                turned: function(e, page) {
+                    /!*console.log('Current view: ', $(this).turn('view'));*!/
+                }
+            }
+        });
+    });
+
+
+    $(window).bind('keydown', function(e){
+
+        if (e.keyCode==37)
+            $('#magazine').turn('previous');
+        else if (e.keyCode==39)
+            $('#magazine').turn('next');
+
+    });*/
+</script>
